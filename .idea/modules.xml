@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FireBaseLogin.iml" filepath="$PROJECT_DIR$/FireBaseLogin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LoginFireBaseToturial.iml" filepath="$PROJECT_DIR$/LoginFireBaseToturial.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
