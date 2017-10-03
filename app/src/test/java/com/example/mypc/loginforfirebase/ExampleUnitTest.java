@@ -1,4 +1,4 @@
-package com.example.mypc.loginfirebasetoturial;
+package com.example.mypc.loginforfirebase;
 
 import org.junit.Test;
 
