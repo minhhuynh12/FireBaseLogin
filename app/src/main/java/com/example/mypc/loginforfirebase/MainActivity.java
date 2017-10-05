@@ -1,5 +1,6 @@
 package com.example.mypc.loginforfirebase;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
-    Button btnLogin;
+    Button btnLogin, btnAddItems;
     EditText editEmail , editPassword;
 
     @Override
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnLogin = (Button) findViewById(R.id.btnLogin);
+        btnAddItems = (Button) findViewById(R.id.btnAddItems);
         editEmail = (EditText) findViewById(R.id.editEmail);
         editPassword = (EditText) findViewById(R.id.editPassword);
 
@@ -57,6 +59,12 @@ public class MainActivity extends AppCompatActivity {
             }
 
 
+        });
+        btnAddItems.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this , AddToDataBase.class));
+            }
         });
 
     }
