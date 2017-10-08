@@ -50,7 +50,7 @@ public class AddToDataBase extends AppCompatActivity {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
                     // User is signed in
-                    Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
+                    Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getEmail());
                     toastMessage("Successfully signed in with: " + user.getEmail());
                 } else {
                     // User is signed out
@@ -87,11 +87,12 @@ public class AddToDataBase extends AppCompatActivity {
                             FirebaseUser user = mAuth.getCurrentUser();
                             String userID = user.getUid();
                             myRef.child(userID).child("Food").child("Favorite foods").child(newFood).setValue("true");
-                            toastMessage("Adding" + newFood + "to database..");
+//                            toastMessage("Adding" + newFood + "to database..");
                             edTxtAddItems.setText("");
                         }
                     }
                 });
+
     }
         @Override
         public void onStart () {
@@ -109,4 +110,6 @@ public class AddToDataBase extends AppCompatActivity {
     private void toastMessage(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
+
+
 }
